@@ -1,8 +1,10 @@
 # int float bool str None
-
 # name = 'Me'
+# print(type(name))
 # age = 4
 # print(name, age, sep="/", end='!
+# // - целая часть от деления; % - остаток от деления; ** - степень; 
+
 
 while True:
     example_number = input('Введите номер задания: ')
@@ -37,6 +39,6 @@ while True:
 
     else:
         print('Введи нормальный номер задания!')
-        continue
-    break
+        continue    # новая итерация цикла while
+    break           # закончить программу, после выпонения одного из трех управжнений
 print("Программа завершена!")
