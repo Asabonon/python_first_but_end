@@ -1,6 +1,6 @@
 ### ИГРА УГАДАЙ ЧИСЛО
 import random
-
+"""
 number = random.randint(1, 100)
 print(number)
 user_number = None
@@ -41,4 +41,35 @@ while not is_winner:
             print('Меньше')
 else:
     print(f'Победитель: {winner_name}')
+"""
+mb_number = 0
+help_comp = ''
+min_number = 1
+max_number = 100
+
+while True:
+    answer_number = int(input(f'Введите число для компьютера от {min_number} до {max_number}: '))
+    if min_number <= answer_number <= max_number:
+        print("Число принято")
+        break
+    print("Вы ввели неправильно")
+
+
+while True:
+    
+    mb_number = random.randint(min_number, max_number)
+    
+    print(f'Компьютер думает, что это число: {mb_number}')
+    if answer_number == mb_number:
+        print("Компьютер угадал")
+        break
+    else:
+        help_comp = input('Введите < или > ваше число')
+
+    if help_comp == '<':
+        max_number = mb_number - 1
+    elif help_comp == '>':
+        min_number = mb_number + 1
+    else:
+        print('Ошибка')
 
