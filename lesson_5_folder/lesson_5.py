@@ -222,6 +222,11 @@ print(get_random([1, 2, 3, 4])) """
 сделайте импорт в main.py всех функций. 
 Вызовите каждую функцию в main.py 
 и проверьте что все работает как надо. """
+import lesson_5_2
+from lesson_5_1 import create_folders, delete_folders
 
-""" from 5_
-import 5.1_fifth.py """
+create_folders()
+delete_folders()
+
+print(lesson_5_2.get_random([1, 2, 23, 2, 5]))
+print(lesson_5_2.get_random([]))
