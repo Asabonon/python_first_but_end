@@ -19,10 +19,14 @@
 отличие только в авторе
 
 Варианты подключения:
-    модуль целиком import math
-    псевдоним для модуля import math as mt
-    импорт всего содержания from math import * (не рекомендуется)
-    импорт конкретных функций, классов, … from math import sin, cos
+    модуль целиком 
+        import math
+    псевдоним для модуля 
+        import math as mt
+    импорт всего содержания 
+        from math import * (не рекомендуется)
+    импорт конкретных функций, классов, … 
+        from math import sin, cos
 
 Использование math:
     Математические функции.
@@ -46,7 +50,7 @@
     choice - случайный элемент последовательности
     shuffle - перемешивает последовательность
     random - случайное число от 0 до 1
-    sample - список длиной k из последовательности
+    sample - список длиной k из последовательности (неск. из послед-ти)
     и многие другие
 
 Импорт из своих модулей:
@@ -129,5 +133,95 @@ sys.argv:
     Параметр ping -> функция выводит pong
     2 параметра name <Имя> -> функция приветствия пользователя
     параметр list: показать содержимое текущей директории
-
 """
+
+# ### создаст 5 папок в этом каталоге ###
+# import sys, os
+
+# name = sys.platform
+
+# for i in range(1, 6):
+#     new_path = os.path.join(os.getcwd(), '{}_{}'.format(name, i))
+#     os.mkdir(new_path)
+    
+# ### /создаст 5 папок в этом каталоге ###
+
+# import sys
+
+# print('Работа с командной строкой ввести: python 5_fifth.py') 
+# print(sys.argv[0])  #если из терминала, то выведет 5_fifth.py, 
+#                     #А если f5, то c:\Users\asabi\Desktop\summer2022\python_first_but_end\5_fifth.py
+# print('ж'*50)
+
+# for arg in sys.argv: # после вызова модуля, передаем аргументы
+#     print(arg) # вывод введенных аргументов построчно
+#     print(type(arg)) # вывод типов введеных аргументов (все строки)
+
+
+
+""" import sys, os
+
+def ping():
+    print ('pong')
+
+def hello(name):
+    print('Hello ', name)
+
+def get_info():
+    print(os.listdir())
+
+command = sys.argv[1]
+
+if command == 'ping':
+    ping()
+elif command == 'list':
+    get_info()
+elif command == 'name':
+    name = sys.argv[2]
+    hello(name) """
+
+# cls - очистить / стереть историю терминала
+
+""" Создайте модуль (модуль - программа на Python, т.е. файл с расширением .py). 
+В нем создайте функцию создающую директории от dir_1 до dir_9 в папке из которой запущен данный код. 
+Затем создайте вторую функцию удаляющую эти папки. Проверьте работу функций в этом же модуле. """
+
+""" import os
+
+def create_folders():
+    for i in range(1, 10):
+        folder_name = f'dir_{i}'
+        os.mkdir(folder_name)
+
+def delete_folders():
+    for i in range(1, 10):
+        folder_name = f'dir_{i}'
+        os.rmdir(folder_name)
+        
+#create_folders()
+#delete_folders() """
+
+""" 2: Создайте модуль. В нем создайте функцию, 
+которая принимает список и возвращает из него случайный элемент. 
+Если список пустой функция должна вернуть None. 
+Проверьте работу функций в этом же модуле. """
+
+""" import random
+
+def get_random(input_list):
+    if input_list:
+        result = random.choice(input_list)
+        return result
+    else: # бесполезно, ибо это в Python по умолчанию
+        return None
+
+print(get_random([1, 2, 3, 4])) """
+
+""" 3: Создайте модуль main.py. 
+Из модулей реализованных в заданиях 1 и 2 
+сделайте импорт в main.py всех функций. 
+Вызовите каждую функцию в main.py 
+и проверьте что все работает как надо. """
+
+""" from 5_
+import 5.1_fifth.py """
