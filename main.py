@@ -1,6 +1,10 @@
 import sys
 from lesson_8 import change_dir, copy_file, create_file, create_folder, get_list, delete_file, save_info
 
+
+#python main.py help в терминал
+
+
 save_info('Старт')
 try:
     command = sys.argv[1]
